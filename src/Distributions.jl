@@ -60,6 +60,7 @@ export
 
     # distribution types
     Arcsine,
+    AsymmetricLaplace,
     Bernoulli,
     Beta,
     BetaBinomial,
