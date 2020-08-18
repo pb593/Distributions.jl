@@ -16,5 +16,7 @@ median(d::AsymmetricLaplace) =
         - log((1 + d.κ^2) / 2) / (d.θ * d.κ)
     end
 
+params(d::AsymmetricLaplace) = (d.μ, d.θ, d.κ)
+
 rand(rng::AbstractRNG, d::AsymmetricLaplace) =
     rand(rng, Exponential(d.θ / d.κ)) - rand(rng, Exponential(d.θ * d.κ)) + d.μ
